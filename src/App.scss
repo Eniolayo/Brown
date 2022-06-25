@@ -1,0 +1,170 @@
+// $green-color: #022c14;
+$white: #c0cac4;
+// $offset: 97px;
+@font-face {
+    font-family: "Black";
+    src: url(../src/fonts/SharpGroteskBlack20.ttf);
+}
+
+@font-face {
+    font-family: "Bold";
+    src: url(../src/fonts/SharpGroteskBold20.ttf);
+}
+
+@font-face {
+    font-family: "Book";
+    src: url(../src/fonts/SharpGroteskBook20.ttf);
+}
+
+:root {
+    --strange-green: hsl(146, 92%, 5%);
+    --whiteish: #fffdeb;
+}
+
+
+ul {
+    list-style: none;
+}
+
+p {
+    display: block;
+}
+
+a {
+    color: var(--whiteish);
+}
+
+.cursor {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: block;
+    border-width: 1px;
+    border-style: solid;
+    border-color: $white;
+    position: relative;
+    position: absolute;
+    transform-origin: 50% 50%;
+    transition-duration: 0.1s;
+    // mix-blend-mode: difference;
+    z-index: 1000;
+    pointer-events: none;
+    // transition-timing-function: ease-out;
+
+}
+
+.cursorInner {
+    width: 10px;
+    height: 10px;
+    background-color: $white;
+    // mix-blend-mode: difference;
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 1000;
+    transition-duration: 0.05s;
+}
+.header {
+    width: 100%;
+    margin-top: 9rem;
+    text-align: center;
+
+    &__hi {
+        font-family: "Bold";
+        font-size: 2.5rem;
+        font-weight: 700;
+    }
+
+    &__name {
+        margin-top: 4.5rem;
+        width: 100%;
+        font-family: "Black";
+        font-weight: 900;
+        line-height: 86.5%;
+        font-size: 8rem;
+    }
+
+    @media (min-width: 850px) {
+        margin-top: 17rem;
+
+        &__hi {
+            font-size: 4rem;
+        }
+
+        &__name {
+            margin-top: 2.7rem;
+            font-size: 12rem;
+        }
+
+        &__break {
+            display: none;
+        }
+    }
+}
+
+.main {
+    width: 100%;
+    margin-top: 4rem;
+
+    &__text {
+        max-width: 34rem;
+        margin-inline: auto;
+    }
+
+    &__para {
+        font-family: "Book";
+        font-size: 1.4rem;
+        font-weight: 400;
+        line-height: 3.2rem;
+        text-align: center;
+        color: var(--whiteish);
+
+        &:not(:first-child) {
+            margin-top: 3.5rem;
+        }
+    }
+
+    @media (min-width: 850px) {
+        margin-top: 4rem;
+
+        &__text {
+            max-width: 55.2rem;
+        }
+
+        &__para {
+            font-size: 1.6rem;
+
+            &:not(:first-child) {
+                margin-top: 3.5rem;
+            }
+        }
+    }
+}
+
+.footer {
+    width: 100%;
+    margin-top: 3.2rem;
+
+    &__list {
+        display: flex;
+        justify-content: center;
+        gap: 1.6rem;
+    }
+
+    &__link {
+        font-family: "Book";
+        font-weight: 400;
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+        text-align: center;
+    }
+
+    @media (min-width:850px) {
+        margin-top: 12rem;
+
+        &__link {
+            font-size: 1.6rem;
+            line-height: 2rem;
+        }
+    }
+}
