@@ -72,7 +72,7 @@ a {
   line-height: 86.5%;
   font-size: 8rem;
 }
-@media (min-width: 850px) {
+@media (min-width: 700px) {
   .header {
     margin-top: 17rem;
   }
@@ -146,4 +146,4 @@ a {
     font-size: 1.6rem;
     line-height: 2rem;
   }
-}/*# sourceMappingURL=App.css.map */
+}
